@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-container">
+        <div class="logo"><span>okeyridhi</span></div>
+        <nav>
+          <a href="#home">Home</a>
+          <a href="#education">Education</a>
+          <a href="#technical-skills">Technical Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#certificates">Certificates</a>
+          <a href="#achievements">Achievements</a>
+          <a href="#positions">Positions</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section id="home" class="hero">
+        <div class="container hero-content">
+          <div>
+            <p class="hero-kicker">Hello, I'm</p>
+            <h1>Ridhi Sharma</h1>
+            <p class="hero-subtitle">
+              I'm a third-year computer science student from India, currently
+              working on my B.Tech and focusing on AI and machine learning.
+            </p>
+            <p class="hero-subtitle">
+              I got started in this area later than some people, but I know
+              where I want to put my focus. Once I decided I wanted to build in
+              this space, I stopped treating it lightly.
+            </p>
+            <p class="hero-subtitle">
+              This portfolio is one part of that. I wanted to learn CI/CD and
+              deployment in a real way—not just in theory—as I've been learning
+              Docker and AWS. Shipping and being early are two things that
+              BreakoutAI talks about a lot. That stuck, so instead of just
+              applying, I made this portfolio into something versioned,
+              structured, and pushed with a purpose.
+            </p>
+            <p class="hero-subtitle">
+              It's more of a beginning than a showcase. I've created a
+              few deployed and operational ML-based projects. They're not very
+              large, but they're effective. It's still a small body of work,
+              but I'm building steadily—and that compounds.
+            </p>
+            <div class="hero-actions">
+              <a href="#projects" class="btn primary">View Projects</a>
+              <a href="#contact" class="btn ghost">Contact Me</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="education" class="section">
+        <div class="container">
+          <h2>Education</h2>
+          <div class="projects-grid">
+            <article class="project-card">
+              <h3>KIET Group of Institutions, AKTU</h3>
+              <p>B.Tech in Computer Science</p>
+              <p class="project-tech">CGPA: 8.0 &middot; 2023 – 2027</p>
+            </article>
+            <article class="project-card">
+              <h3>St. Mary’s Convent Inter College, Lucknow</h3>
+              <p>ISC (Class XII)</p>
+              <p class="project-tech">Percentage: 87.25% &middot; 2021 – 2022</p>
+            </article>
+            <article class="project-card">
+              <h3>St. Mary’s Convent Inter College, Lucknow</h3>
+              <p>ICSE (Class X)</p>
+              <p class="project-tech">Percentage: 90.6% &middot; 2019 – 2020</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="technical-skills" class="section alt">
+        <div class="container">
+          <h2>Technical Skills</h2>
+          <div class="skills-grid">
+            <div class="skill-card">
+              <h3>Languages</h3>
+              <p>Python, Java</p>
+            </div>
+            <div class="skill-card">
+              <h3>Machine Learning</h3>
+              <p>Supervised &amp; Unsupervised Learning, Model Evaluation, Feature Engineering</p>
+            </div>
+            <div class="skill-card">
+              <h3>Frameworks</h3>
+              <p>Scikit-learn, Flask</p>
+            </div>
+            <div class="skill-card">
+              <h3>Tools &amp; Cloud</h3>
+              <p>Git, GitHub, Docker, AWS</p>
+            </div>
+            <div class="skill-card">
+              <h3>Core Foundations</h3>
+              <p>Data Structures &amp; Algorithms, OOP, CI/CD basics</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="section">
+        <div class="container">
+          <h2>Projects</h2>
+          <div class="projects-grid">
+            <article class="project-card">
+              <h3>ML Prediction Web App</h3>
+              <p>
+                A lightweight Flask-based web application that serves a trained
+                machine learning model for real-time predictions. The goal was
+                to move beyond notebooks and deploy a working ML system
+                end-to-end.
+              </p>
+              <p>
+                Includes a trained ML model serialized as <code>.pkl</code>, an
+                integrated preprocessing pipeline with StandardScaler, a simple
+                HTML frontend, and a production deployment on AWS.
+              </p>
+              <p class="project-tech">
+                Tech Stack: Python, Flask, Scikit-learn, StandardScaler, AWS
+                Elastic Beanstalk, EC2 (t3.micro), Nginx, Gunicorn
+              </p>
+              <div class="project-links">
+                <a
+                  class="project-link"
+                  href="http://firstflaskmlapp-env.eba-4jr4gpm2.eu-north-1.elasticbeanstalk.com"
+                  target="_blank"
+                  >Live Demo</a
+                >
+                <a
+                  class="project-link ghost"
+                  href="https://github.com/ridhisharmaa/first_flask_ml_app"
+                  target="_blank"
+                  >GitHub Repo</a
+                >
+              </div>
+            </article>
+            <article class="project-card">
+              <h3>Student Performance Prediction – Dockerized ML App</h3>
+              <p>
+                A fully containerized, production-oriented machine learning web
+                application that predicts student performance from academic and
+                demographic inputs. 
+              </p>
+              <p>Built with a custom preprocessing pipeline
+                and serialized model artifacts, the system is packaged as a
+                Docker image and deployed on AWS Elastic Beanstalk (Docker on
+                Amazon Linux 2023) to simulate a real-world cloud deployment
+                workflow.</p>
+              <p class="project-tech">
+                Tech Stack: Python, Flask, Scikit-learn, Custom Pipeline, Docker,
+                AWS Elastic Beanstalk, EC2, Gunicorn
+              </p>
+              <div class="project-links">
+                <a
+                  class="project-link"
+                  href="http://student-performance-ml14-app-env.eba-6uh8askm.ap-south-1.elasticbeanstalk.com/predictdata"
+                  target="_blank"
+                  >Live App</a
+                >
+                <a
+                  class="project-link ghost"
+                  href="https://github.com/ridhisharmaa/ML_Project_1"
+                  target="_blank"
+                  >GitHub Repo</a
+                >
+              </div>
+            </article>
+            <article class="project-card">
+              <h3>Project Three</h3>
+              <p>
+                Add more projects as you like. You can link to GitHub or live
+                demos in this section.
+              </p>
+              <p class="project-tech">Tech Stack: Machine Learning, TensorFlow</p>
+              <div class="project-links">
+                <a class="project-link" href="#" target="_blank">Live Demo</a>
+                <a class="project-link ghost" href="#" target="_blank">GitHub Repo</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="certificates" class="section alt">
+        <div class="container">
+          <h2>Certificates</h2>
+          <div class="projects-grid">
+            <article class="project-card">
+              <h3>AWS Certified Cloud Practitioner</h3>
+              <p>AWS</p>
+              <div class="project-links">
+                <a class="project-link" href="#" target="_blank">View Certificate</a>
+              </div>
+            </article>
+            <article class="project-card">
+              <h3>AWS Certified AI Practitioner</h3>
+              <p>AWS</p>
+              <div class="project-links">
+                <a class="project-link" href="#" target="_blank">View Certificate</a>
+              </div>
+            </article>
+            <article class="project-card">
+              <h3>Data Science for Engineers</h3>
+              <p>NPTEL</p>
+              <div class="project-links">
+                <a class="project-link" href="#" target="_blank">View Certificate</a>
+              </div>
+            </article>
+            <article class="project-card">
+              <h3>Design and Analysis of Algorithms</h3>
+              <p>NPTEL</p>
+              <div class="project-links">
+                <a class="project-link" href="#" target="_blank">View Certificate</a>
+              </div>
+            </article>
+            <article class="project-card">
+              <h3>Programming in Java</h3>
+              <p>NPTEL</p>
+              <div class="project-links">
+                <a class="project-link" href="#" target="_blank">View Certificate</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="achievements" class="section">
+        <div class="container">
+          <h2>Achievements</h2>
+          <ul class="achievement-list">
+            <li class="achievement-item">
+              Achieved a maximum rating of 1769 on LeetCode (Top 13.16%),
+              solving 580+ algorithmic problems.
+            </li>
+            <li class="achievement-item">
+              Solved more than 700 algorithmic problems across coding platforms,
+              demonstrating strong analytical thinking and problem‑solving
+              ability.
+            </li>
+            <li class="achievement-item">
+              Secured 1st position in a department-level aptitude test,
+              demonstrating strong logical reasoning abilities.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="positions" class="section alt">
+        <div class="container">
+          <h2>Positions of Responsibility</h2>
+          <div class="projects-grid">
+            <article class="project-card">
+              <h3>Head Coordinator
+</h3>
+              <p class="project-tech">CP Byte, KIET Deemed to be University  · AY 2025 – 2026</p>
+              <p >• Led the coding society’s DSA wing, managing initiatives, events, and student mentorship.</p>
+<p>• Spearheaded coding events and peer-learning activities, strengthening the community’s technical culture.
+</p>
+            </article>
+            <article class="project-card">
+              <h3>DSA Coordinator
+</h3>
+              <p class="project-tech">CP Byte, KIET Deemed to be University ·  AY 2024 - 25</p>
+              <p>• Mentored 100+ students in the field of Data Structures and Algorithms.</p>
+<p>• Organized and taught in workshops and exibhitions expanding the society within the college.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section">
+        <div class="container">
+          <h2>and before you close this tab</h2>
+          <p>
+           We’re probably meeting at the beginning of my AI/ML journey. That’s true.
+
+I may not know everything yet — but I’m building seriously, and I’m not experimenting with my direction anymore.
+
+Early-stage doesn’t mean small. It just means momentum hasn’t compounded yet.</p>
+
+<p>You’re early and moving fast — building while it’s still raw and forming.
+
+I’m in a similar phase. Still early. Still building.
+
+If timing matters for startups, it probably matters for people as well.</p>
+
+<p>If I get the chance to be part of what you’re building, I won’t treat it lightly. I’ll show up fully — learn fast, build seriously, and grow with it.
+
+Who knows what we might end up building.</p>
+          
+          <div class="contact-details">
+    <a href="https://mail.google.com/mail/u/0/?to=ridhisharma2521@gmail.com&fs=1&tf=cm"><strong>Email</strong></a>
+    <a href="https://www.linkedin.com/in/ridhi-sharma-7a8ba2215/" target="_blank"><strong>LinkedIn</strong></a>
+    <a href="https://github.com/ridhisharmaa" target="_blank"><strong>GitHub</strong></a>
+    <a href="https://leetcode.com/u/okeyridhi/" target="_blank"><strong>Leetcode</strong></a>
+</div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>© <span id="year"></span> Your Name. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+  </html>
+
