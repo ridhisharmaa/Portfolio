@@ -1,5 +1,13 @@
-portfolio/
+# Python cache
 __pycache__/
 *.pyc
+
+# Virtual environment
+portfolio/
+
+# Git files
 .git
 .gitignore
+
+# Private keys
+*.pem
